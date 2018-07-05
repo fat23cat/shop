@@ -5,11 +5,16 @@ import { MatButtonModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
+import { ProductsService } from './services/products.service';
+import { ProductListComponent } from './productList/productList.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    ProductListComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
