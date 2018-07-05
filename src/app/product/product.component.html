@@ -1,1 +1,10 @@
-<button mat-raised-button (click)="onBuy()">Buy</button>
+<div class="product">
+    <div>Name: {{product.name}}</div>
+    <div>Description: {{product.description}}</div>
+    <div>Price: {{product.price}}</div>
+    <div class="tag">
+        <span>Tags: </span>
+        <div class="tag_item" *ngFor="let tag of product.tags">{{tag}}</div>
+    </div>
+    <button [disabled]="!product.isAvailable" mat-raised-button (click)="onBuy(product)">Buy</button>
+</div>
