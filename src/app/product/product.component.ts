@@ -1,4 +1,4 @@
-import { IProduct } from './../models/IProduct';
+import { ProductModel } from '../models/ProductModel';
 import { CartService } from './../services/cart.service';
 import { CommunicationService } from './../services/communication.service';
 import { Component, OnInit, Input } from '@angular/core';
@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input() product: IProduct;
+  @Input() product: ProductModel;
 
   constructor(private communicationService: CommunicationService,
     private cartService: CartService) { }
@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
   }
 
-  onBuy(product: IProduct): void {
+  onBuy(product: ProductModel): void {
     console.log('Item bought!');
     this.cartService.addItemToCart(product);
     this.communicationService.itemAdded();

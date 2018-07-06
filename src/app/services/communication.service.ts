@@ -5,11 +5,10 @@ import { Subject } from "rxjs";
   providedIn: 'root'
 })
 export class CommunicationService {
-
-  constructor() { }
-
   private add = new Subject<any>();
   emitAddEvent = this.add.asObservable();
+
+  constructor() { }
 
   itemAdded(): void {
     this.add.next();

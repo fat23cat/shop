@@ -1,15 +1,15 @@
-import { IProduct } from './../models/IProduct';
+import { ProductModel } from '../models/ProductModel';
 import { Injectable } from '@angular/core';
 
 export interface Product {
-  getProducts(): Array<IProduct>;
+  getProducts(): Array<ProductModel>;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService implements Product {
-  private products: Array<IProduct> = [
+  private products: Array<ProductModel> = [
     {
       name: "Kia Rio",
       description: "car",
@@ -43,7 +43,7 @@ export class ProductsService implements Product {
   ];
   constructor() { }
 
-  getProducts(): Array<IProduct> {
+  getProducts(): Array<ProductModel> {
     return this.products;
   }
 }

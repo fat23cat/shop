@@ -1,6 +1,6 @@
 import { Subscription } from 'rxjs';
 import { CommunicationService } from './../services/communication.service';
-import { IProduct } from './../models/IProduct';
+import { ProductModel } from '../models/ProductModel';
 import { CartService } from './../services/cart.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
@@ -10,7 +10,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit, OnDestroy {
-  items: Array<IProduct> | null;
+  items: Array<ProductModel> | null;
   private anchor: Subscription;
 
   constructor(private cartService: CartService,
