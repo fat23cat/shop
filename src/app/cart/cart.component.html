@@ -1,0 +1,12 @@
+<div class="cart">
+    <div *ngIf="items; else cartEmpty">
+        <div>Товары в корзине: </div>
+        <div *ngFor="let item of items">
+            {{item.name}}
+        </div>
+    </div>
+</div>
+
+<ng-template #cartEmpty>
+    <div>Корзина пуста</div>
+</ng-template>
