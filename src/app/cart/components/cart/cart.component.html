@@ -1,11 +1,14 @@
-<div class="cart">
+<mat-card class="cart">
     <div *ngIf="items; else cartEmpty">
         <div>Товары в корзине: </div>
         <div *ngFor="let item of items">
             {{item.name}}
         </div>
+        <hr>
+        <div>Количество: {{cartService.getItemsCount()}}</div>
+        <div>Итого: {{cartService.getItemsAnount()}}</div>
     </div>
-</div>
+</mat-card>
 
 <ng-template #cartEmpty>
     <div>Корзина пуста</div>

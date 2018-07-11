@@ -18,7 +18,8 @@ export class ProductsService implements Product {
       tags: [
         "car",
         "korean"
-      ]
+      ],
+      warranty: 5
     },
     {
       name: "VW Polo",
@@ -28,7 +29,8 @@ export class ProductsService implements Product {
       tags: [
         "car",
         "red"
-      ]
+      ],
+      warranty: 2
     },
     {
       name: "Lada Vesta",

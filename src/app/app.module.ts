@@ -1,25 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material';
-
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { ProductsService } from './services/products.service';
-import { ProductListComponent } from './productList/productList.component';
-import { CartComponent } from './cart/cart.component';
+import { CartModule } from './cart/cart.module';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductComponent,
-    ProductListComponent,
-    CartComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    CartModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

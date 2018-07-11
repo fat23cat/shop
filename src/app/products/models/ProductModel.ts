@@ -4,4 +4,5 @@ export interface ProductModel {
     price: number;
     isAvailable: boolean;
     tags: Array<string>;
+    warranty?: number;
 }

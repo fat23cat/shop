@@ -1,4 +1,4 @@
-import { ProductModel } from '../models/ProductModel';
+import { ProductModel } from '../../products/models/ProductModel';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -15,4 +15,17 @@ export class CartService {
   getBoughtItems(): Array<ProductModel> {
     return this.items;
   }
+
+  getItemsCount() {
+    return this.items.length;
+  }
+
+  getItemsAnount() {
+    let sum = 0;
+    this.items.forEach( item => {
+      sum += item.price;
+    });
+    return sum;
+  }
+
 }
