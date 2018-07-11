@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/productList/productList.component';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ import { MatButtonModule, MatCardModule } from '@angular/material';
   imports: [
     CommonModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    SharedModule
   ],
   declarations: [
     ProductComponent,

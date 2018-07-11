@@ -1,4 +1,4 @@
-<mat-card class="product">
+<mat-card background class="product">
     <div>Name: {{product.name}}</div>
     <div>Description: {{product.description}}</div>
     <div>Price: {{product.price}}</div>
@@ -6,6 +6,6 @@
         <span>Tags: </span>
         <div class="tag_item" *ngFor="let tag of product.tags">{{tag}}</div>
     </div>
-    <div *ngIf="product.warranty">Warranty: {{product.warranty}} years</div>
+    <div *ngIf="product.warranty" [ngClass]="{'warranty': product.warranty > 3}">Warranty: {{product.warranty}} years</div>
     <button [disabled]="!product.isAvailable" mat-raised-button (click)="onBuy(product)">Buy</button>
 </mat-card>
