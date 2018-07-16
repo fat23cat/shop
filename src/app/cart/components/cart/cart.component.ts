@@ -13,7 +13,7 @@ export class CartComponent implements OnInit, OnDestroy {
   items: Array<ProductModel> | null;
   private anchor: Subscription;
 
-  constructor(private cartService: CartService,
+  constructor(public cartService: CartService,
     private communicationService: CommunicationService) {
   }
 
