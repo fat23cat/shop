@@ -1,0 +1,18 @@
+.product {
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+}
+
+.tag_item {
+    margin: 0 5px 0 0;
+}
+
+.warranty {
+    font-weight: bold;
+}
