@@ -13,7 +13,12 @@ export class CartService {
   }
 
   getBoughtItems(): Array<ProductModel> {
-    return this.items;
+    const result = [...this.items.reduce((mp, o) => {
+      if (!mp.has(o.name)) mp.set(o.name, Object.assign({ count: 0 }, o));
+      mp.get(o.name).count++;
+      return mp;
+    }, new Map).values()];
+    return result;
   }
 
   getItemsCount() {

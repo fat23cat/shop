@@ -1,9 +1,10 @@
 <mat-card class="cart">
     <div *ngIf="items; else cartEmpty">
         <div>Товары в корзине: </div>
-        <div *ngFor="let item of items">
-            {{item.name}}
-        </div>
+        <app-cart-item 
+            *ngFor="let item of items"
+            [item]="item">    
+        </app-cart-item>
         <hr>
         <div>Количество товаров: {{cartService.getItemsCount()}}</div>
         <div>Итого: {{cartService.getItemsAnount()}} у.е.</div>
