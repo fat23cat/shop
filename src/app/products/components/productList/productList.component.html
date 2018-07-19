@@ -1,4 +1,11 @@
-<app-product *ngFor="let product of products" 
-    [product]="product"
-    (itemAdded)="onBuy(product)">
-</app-product>
+<mat-card class="card">
+    <div class="buttons-group">
+        <button class="button" class="button" mat-raised-button (click)="onSortSelect('name')">Sort by name</button>
+        <button class="button" mat-raised-button (click)="onSortSelect('price')">Sort by price</button>
+        <button class="button" mat-raised-button (click)="onTypeChanged()">{{ type }}</button>
+    </div>
+    <app-product *ngFor="let product of products | orderBy : field : reverse" 
+        [product]="product"
+        (itemAdded)="onBuy(product)">
+    </app-product>
+</mat-card>

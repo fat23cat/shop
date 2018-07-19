@@ -1,7 +1,7 @@
 <mat-card background class="product">
-    <div>Name: {{product.name}}</div>
+    <div>Name: {{product.name | uppercase}}</div>
     <div>Description: {{product.description}}</div>
-    <div>Price: {{product.price}}</div>
+    <div>Price: {{product.price | currency: USD}}</div>
     <div class="tag">
         <span>Tags: </span>
         <div class="tag_item" *ngFor="let tag of product.tags">{{tag}}</div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BackgroundDirective } from './directives/background.directive';
 import { MatButtonModule, MatCardModule, MatIconModule } from '@angular/material';
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 @NgModule({
   imports: [
@@ -11,13 +12,15 @@ import { MatButtonModule, MatCardModule, MatIconModule } from '@angular/material
     MatIconModule
   ],
   declarations: [
-    BackgroundDirective
+    BackgroundDirective,
+    OrderByPipe
   ],
   exports: [
     BackgroundDirective,
     MatButtonModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    OrderByPipe
   ]
 })
 export class SharedModule { }

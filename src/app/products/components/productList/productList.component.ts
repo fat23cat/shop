@@ -11,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   products: Array<ProductModel>;
+  field: string = 'price';
+  reverse: boolean = false;
+  type: string = '↑';
 
   constructor(private productsService: ProductsService,
     private communicationService: CommunicationService,
@@ -24,6 +27,15 @@ export class ProductListComponent implements OnInit {
     console.log('Item bought!');
     this.cartService.addItemToCart(product);
     this.communicationService.itemAdded();
+  }
+
+  onSortSelect(value: string) {
+    this.field = value;
+  }
+
+  onTypeChanged() {
+    this.reverse = !this.reverse;
+    this.reverse ? this.type = '↓' : this.type = '↑';
   }
 
 }

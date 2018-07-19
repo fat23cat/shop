@@ -1,0 +1,13 @@
+.card {
+    width: 230px;
+}
+
+.buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    margin: 2px 0;
+}

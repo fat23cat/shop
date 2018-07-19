@@ -12,6 +12,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class CartComponent implements OnInit, OnDestroy {
   items: Array<ProductModel> | null;
   private anchor: Subscription;
+  public lastUpdate: Date;
 
   constructor(public cartService: CartService,
     private communicationService: CommunicationService) {
@@ -20,6 +21,7 @@ export class CartComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.anchor = this.communicationService.emitAddEvent.subscribe(x => {
       this.items = this.cartService.getBoughtItems();
+      this.lastUpdate = new Date();
     });
   }
 

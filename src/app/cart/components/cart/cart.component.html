@@ -10,6 +10,9 @@
         <div>Итого: {{cartService.getItemsAnount()}} у.е.</div>
     </div>
 </mat-card>
+<div *ngIf="items">
+    Корзина обновлена: {{lastUpdate | date: 'medium'}}
+</div>
 
 <ng-template #cartEmpty>
     <div>Корзина пуста</div>

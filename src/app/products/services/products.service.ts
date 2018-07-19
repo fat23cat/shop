@@ -11,6 +11,16 @@ export interface Product {
 export class ProductsService implements Product {
   private products: Array<ProductModel> = [
     {
+      name: "Lada Vesta",
+      description: "car",
+      price: 9,
+      isAvailable: true,
+      tags: [
+        "car",
+        "cheap"
+      ]
+    },
+    {
       name: "Kia Rio",
       description: "car",
       price: 10000,
@@ -31,16 +41,6 @@ export class ProductsService implements Product {
         "red"
       ],
       warranty: 2
-    },
-    {
-      name: "Lada Vesta",
-      description: "car",
-      price: 9,
-      isAvailable: true,
-      tags: [
-        "car",
-        "cheap"
-      ]
     }
   ];
   constructor() { }
